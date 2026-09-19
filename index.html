@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExamSaathi — Competitive Exam Preparation</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0F1B33;--bg-panel:#16234A;--ink:#EDEEF3;--ink-dim:#A9B3CC;--gold:#E3A930;--line:#2A3A63;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.5;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  a{color:inherit}
+  header{padding:20px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:10;flex-wrap:wrap;gap:10px;}
+  .logo{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;}
+  .logo span{color:var(--gold)}
+  nav a{color:var(--ink-dim);text-decoration:none;margin-left:18px;font-size:0.88rem;}
+  nav a:hover{color:var(--gold)}
+
+  .hero{padding:56px 0 40px;border-bottom:1px solid var(--line);}
+  .hero h1{font-family:'Fraunces',serif;font-size:2.2rem;line-height:1.2;max-width:600px;font-weight:700;}
+  .hero p{color:var(--ink-dim);max-width:520px;margin-top:14px;}
+
+  .exam-section{padding:48px 0;border-bottom:1px solid var(--line);scroll-margin-top:80px;}
+  .exam-section h2{font-family:'Fraunces',serif;font-size:1.7rem;margin-bottom:6px;}
+  .exam-section .sub{color:var(--ink-dim);margin-bottom:24px;}
+
+  .facts{display:flex;gap:28px;flex-wrap:wrap;padding:18px 0 28px;}
+  .fact .label{color:var(--ink-dim);font-size:0.8rem;}
+  .fact .value{font-size:1rem;font-weight:600;margin-top:3px;}
+
+  h3.block-title{font-family:'Fraunces',serif;font-size:1.15rem;margin:24px 0 14px;}
+
+  .tier-list{display:flex;flex-direction:column;}
+  .tier{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);}
+  .tier:last-child{border-bottom:none;}
+  .tier .num{font-family:'Fraunces',serif;color:var(--gold);font-size:1.05rem;min-width:24px;}
+  .tier .t-name{font-weight:600;font-size:0.95rem;}
+  .tier .t-desc{color:var(--ink-dim);font-size:0.85rem;margin-top:3px;}
+
+  .subject-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .subject-card{background:var(--bg-panel);padding:16px;}
+  .subject-card h4{font-size:0.92rem;font-weight:600;margin-bottom:4px;}
+  .subject-card p{color:var(--ink-dim);font-size:0.82rem;}
+
+  .note{color:var(--ink-dim);font-size:0.82rem;margin-top:14px;}
+  .note a{color:var(--gold);}
+
+  .res-list{display:flex;flex-direction:column;margin-top:14px;}
+  .res-item{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-bottom:1px dashed var(--line);}
+  .res-item:last-child{border-bottom:none;}
+  .res-item .name{color:var(--ink-dim);font-size:0.88rem;font-style:italic;}
+  .res-item .meta{color:var(--ink-dim);font-size:0.78rem;}
+
+  footer{padding:24px 0;color:var(--ink-dim);font-size:0.85rem;}
+
+  @media(max-width:600px){
+    .subject-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:1.8rem;}
+    nav{display:flex;flex-wrap:wrap;}
+    nav a{margin-left:0;margin-right:14px;}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Exam<span>Saathi</span></div>
+      <nav>
+        <a href="#ssc">SSC</a>
+        <a href="#banking">Banking</a>
+        <a href="#railway">Railway</a>
+        <a href="#statepsc">State PSC</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#defence">Defence</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Ek jagah, saari exam ki taiyari.</h1>
+      <p>SSC, Banking, Railway aur State PSC — sab exams ka current pattern aur syllabus, ek hi jagah.</p>
+    </section>
+
+    <section class="exam-section" id="ssc">
+      <h2>SSC CGL</h2>
+      <div class="sub">Combined Graduate Level — Group B &amp; C posts</div>
+      <div class="facts">
+        <div class="fact"><div class="label">Conducting Body</div><div class="value">Staff Selection Commission</div></div>
+        <div class="fact"><div class="label">Mode</div><div class="value">Online (CBT)</div></div>
+        <div class="fact"><div class="label">Tiers</div><div class="value">2 (Tier I + Tier II)</div></div>
+      </div>
+      <h3 class="block-title">Exam Pattern</h3>
+      <div class="tier-list">
+        <div class="tier"><div class="num">1</div><div><div class="t-name">Tier I — 100 Q · 200 Marks · 60 min</div><div class="t-desc">Qualifying. 4 sections (25 Q each): Reasoning, General Awareness, Quant, English. Negative marking: 0.50/wrong.</div></div></div>
+        <div class="tier"><div class="num">2</div><div><div class="t-name">Tier II — Paper 1, 2 &amp; 3</div><div class="t-desc">Paper 1 compulsory (Maths &amp; Reasoning, English, GA + Computer). Paper 2 (Statistics) &amp; Paper 3 sirf specific posts ke liye. Final merit yahin decide hoti hai.</div></div></div>
+        <div class="tier"><div class="num">3</div><div><div class="t-name">Document Verification</div><div class="t-desc">Certificates check aur physical verification</div></div></div>
+      </div>
+      <h3 class="block-title">Subject-wise Topics</h3>
+      <div class="subject-grid">
+        <div class="subject-card"><h4>Quantitative Aptitude</h4><p>Number System, Algebra, Geometry, Mensuration, Trigonometry, Statistics</p></div>
+        <div class="subject-card"><h4>Reasoning</h4><p>Analogy, Symbolic Operations, Coding-Decoding, Series, Puzzle</p></div>
+        <div class="subject-card"><h4>English Language</h4><p>Grammar, Comprehension, Vocabulary, Error Spotting</p></div>
+        <div class="subject-card"><h4>General Awareness</h4><p>History, Polity, Geography, Current Affairs, Science</p></div>
+      </div>
+      <p class="note">Source: <a href="https://ssc.gov.in" target="_blank">ssc.gov.in</a> — official notification zaroor cross-check karo, pattern saal ke hisaab se revise hota hai.</p>
+      <h3 class="block-title">Notes &amp; PYQs</h3>
+      <div class="res-list">
+        <div class="res-item"><span class="name">SSC CGL Tier I — Previous Year Papers</span><span class="meta">Add karo</span></div>
+        <div class="res-item"><span class="name">Quant Formula Sheet</span><span class="meta">Add karo</span></div>
+        <div class="res-item"><span class="name">SSC CGL Syllabus PDF</span><span class="meta">Add karo</span></div>
+      </div>
+    </section>
+
+    <section class="exam-section" id="banking">
+      <h2>Banking — IBPS PO</h2>
+      <div class="sub">Probationary Officer — Public Sector Banks</div>
+      <div class="facts">
+        <div class="fact"><div class="label">Conducting Body</div><div class="value">IBPS</div></div>
+        <div class="fact"><div class="label">Mode</div><div class="value">Online (CBT)</div></div>
+        <div class="fact"><div class="label">Stages</div><div class="value">3 (Prelims, Mains, Interview)</div></div>
+      </div>
+      <h3 class="block-title">Exam Pattern</h3>
+      <div class="tier-list">
+        <div class="tier"><div class="num">1</div><div><div class="t-name">Prelims — 100 Q · 100 Marks · 60 min</div><div class="t-desc">English (30), Quant (35), Reasoning (35). Qualifying — marks final merit mein nahi jodte. Negative marking: 0.25/wrong.</div></div></div>
+        <div class="tier"><div class="num">2</div><div><div class="t-name">Mains — 200 Objective + 25 Descriptive = 225 Marks</div><div class="t-desc">Reasoning &amp; Computer, Data Analysis &amp; Interpretation, GA/Banking, English, Letter &amp; Essay Writing.</div></div></div>
+        <div class="tier"><div class="num">3</div><div><div class="t-name">Interview</div><div class="t-desc">Final merit = 80% Mains + 20% Interview</div></div></div>
+      </div>
+      <h3 class="block-title">Subject-wise Topics</h3>
+      <div class="subject-grid">
+        <div class="subject-card"><h4>Quantitative Aptitude</h4><p>Simplification, Data Interpretation, Quadratic Equations, Arithmetic</p></div>
+        <div class="subject-card"><h4>Reasoning</h4><p>Puzzle, Seating Arrangement, Syllogism, Inequality</p></div>
+        <div class="subject-card"><h4>English Language</h4><p>Reading Comprehension, Cloze Test, Error Detection</p></div>
+        <div class="subject-card"><h4>General Awareness</h4><p>Banking Awareness, Current Affairs, Static GK</p></div>
+      </div>
+      <p class="note">Source: <a href="https://www.ibps.in" target="_blank">ibps.in</a> — official notification zaroor cross-check karo.</p>
+      <h3 class="block-title">Notes &amp; PYQs</h3>
+      <div class="res-list">
+        <div class="res-item"><span class="name">IBPS PO Prelims — Previous Year Papers</span><span class="meta">Add karo</span></div>
+        <div class="res-item"><span class="name">Banking Awareness Notes</span><span class="meta">Add karo</span></div>
+        <div class="res-item"><span class="name">Data Interpretation Practice Set</span><span class="meta">Add karo</span></div>
+      </div>
+    </section>
+
+    <section class="exam-section" id="railway">
+      <h2>Railway — RRB NTPC</h2>
+      <div class="sub">Non-Technical Popular Categories — Station Master, Clerk, Goods Train Manager</div>
+      <div class="facts">
+        <div class="fact"><div class="label">Conducting Body</div><div class="value">Railway Recruitment Board</div></div>
+        <div class="fact"><div class="label">Mode</div><div class="value">Online (CBT)</div></div>
+        <div class="fact"><div class="label">Stages</div><div class="value">2 CBT + Skill Test/CBAT</div></div>
+      </div>
+      <h3 class="block-title">Exam Pattern</h3>
+      <div class="tier-list">
+        <div class="tier"><div class="num">1</div><div><div class="t-name">CBT 1 — 100 Q · 100 Marks · 90 min</div><div class="t-desc">General Awareness (40), Mathematics (30), Reasoning (30). Screening stage. Negative marking: 1/3 per wrong.</div></div></div>
+        <div class="tier"><div class="num">2</div><div><div class="t-name">CBT 2 — 120 Q · 120 Marks · 90 min</div><div class="t-desc">Same subjects, higher difficulty: GA (50), Mathematics (35), Reasoning (35). Merit yahin decide hoti hai.</div></div></div>
+        <div class="tier"><div class="num">3</div><div><div class="t-name">Skill Test / CBAT + DV</div><div class="t-desc">Typing test (clerk posts) ya CBAT (Station Master), phir document verification &amp; medical.</div></div></div>
+      </div>
+      <h3 class="block-title">Subject-wise Topics</h3>
+      <div class="subject-grid">
+        <div class="subject-card"><h4>Mathematics</h4><p>Number System, Percentage, Time &amp; Work, Mensuration, Geometry</p></div>
+        <div class="subject-card"><h4>Reasoning</h4><p>Analogy, Classification, Coding-Decoding, Puzzle</p></div>
+        <div class="subject-card"><h4>General Awareness</h4><p>Current Affairs, History, Geography, Polity, Science</p></div>
+      </div>
+      <p class="note">Source: <a href="https://www.rrbcdg.gov.in" target="_blank">RRB official sites</a> — zone ke hisaab se notification alag hoti hai, apne zone ka site check karo.</p>
+      <h3 class="block-title">Notes &amp; PYQs</h3>
+      <div class="res-list">
+        <div class="res-item"><span class="name">RRB NTPC — Previous Year Papers</span><span class="meta">Add karo</span></div>
+        <div class="res-item"><span class="name">General Science Notes</span><span class="meta">Add karo</span></div>
+        <div class="res-item"><span class="name">RRB Group D Syllabus PDF</span><span class="meta">Add karo</span></div>
+      </div>
+    </section>
+
+    <section class="exam-section" id="statepsc">
+      <h2>State PSC</h2>
+      <div class="sub">State Public Service Commission — Group A/B/C posts</div>
+      <div class="facts">
+        <div class="fact"><div class="label">Conducting Body</div><div class="value">State Public Service Commission</div></div>
+        <div class="fact"><div class="label">Mode</div><div class="value">Offline / Online (state ke hisaab se)</div></div>
+        <div class="fact"><div class="label">Stages</div><div class="value">3 (Prelims, Mains, Interview)</div></div>
+      </div>
+      <h3 class="block-title">Exam Pattern (General Structure)</h3>
+      <div class="tier-list">
+        <div class="tier"><div class="num">1</div><div><div class="t-name">Prelims</div><div class="t-desc">GS + CSAT — objective type, qualifying nature</div></div></div>
+        <div class="tier"><div class="num">2</div><div><div class="t-name">Mains</div><div class="t-desc">Descriptive papers — GS, Essay, Optional subject (state ke hisaab se vary karta hai)</div></div></div>
+        <div class="tier"><div class="num">3</div><div><div class="t-name">Interview</div><div class="t-desc">Personality test aur final merit list</div></div></div>
+      </div>
+      <h3 class="block-title">Subject-wise Topics</h3>
+      <div class="subject-grid">
+        <div class="subject-card"><h4>General Studies</h4><p>History, Geography, Polity, Economy, Environment</p></div>
+        <div class="subject-card"><h4>CSAT</h4><p>Reasoning, Comprehension, Basic Numeracy</p></div>
+        <div class="subject-card"><h4>State-Specific GK</h4><p>State history, culture, current affairs</p></div>
+        <div class="subject-card"><h4>Optional Subjects</h4><p>State ke hisaab se choose kiya jaata hai</p></div>
+      </div>
+      <p class="note">State PSC ka exact pattern har state mein alag hota hai (UPPSC, MPPSC, BPSC, etc.) — apne state PSC ki official website zaroor check karo.</p>
+      <h3 class="block-title">Notes &amp; PYQs</h3>
+      <div class="res-list">
+        <div class="res-item"><span class="name">State PSC Prelims — Previous Year Papers</span><span class="meta">Add karo</span></div>
+        <div class="res-item"><span class="name">Mains Answer Writing Practice Sets</span><span class="meta">Add karo</span></div>
+        <div class="res-item"><span class="name">Optional Subject Booklist</span><span class="meta">Add karo</span></div>
+      </div>
+    </section>
+
+    <section class="exam-section" id="teaching">
+      <h2>Teaching — CTET</h2>
+      <div class="sub">Central Teacher Eligibility Test — Classes I–VIII</div>
+      <div class="facts">
+        <div class="fact"><div class="label">Conducting Body</div><div class="value">CBSE</div></div>
+        <div class="fact"><div class="label">Mode</div><div class="value">Offline (OMR)</div></div>
+        <div class="fact"><div class="label">Papers</div><div class="value">2 (Paper I + Paper II)</div></div>
+      </div>
+      <h3 class="block-title">Exam Pattern</h3>
+      <div class="tier-list">
+        <div class="tier"><div class="num">1</div><div><div class="t-name">Paper I — 150 Q · 150 Marks · 2.5 hrs</div><div class="t-desc">Classes I–V ke liye. Child Development &amp; Pedagogy, Language I, Language II, Maths, Environmental Studies (30 Q each). No negative marking.</div></div></div>
+        <div class="tier"><div class="num">2</div><div><div class="t-name">Paper II — 150 Q · 150 Marks · 2.5 hrs</div><div class="t-desc">Classes VI–VIII ke liye. Child Development, Language I &amp; II, aur Maths+Science YA Social Studies (choice). No negative marking.</div></div></div>
+      </div>
+      <h3 class="block-title">Subject-wise Topics</h3>
+      <div class="subject-grid">
+        <div class="subject-card"><h4>Child Development &amp; Pedagogy</h4><p>Growth stages, learning theories, inclusive education</p></div>
+        <div class="subject-card"><h4>Language I &amp; II</h4><p>Grammar, comprehension, pedagogy of language teaching</p></div>
+        <div class="subject-card"><h4>Mathematics / Science</h4><p>NCERT-based, pedagogy of teaching maths/science</p></div>
+        <div class="subject-card"><h4>Environmental / Social Studies</h4><p>NCERT-based, teaching pedagogy</p></div>
+      </div>
+      <p class="note">Score lifetime valid hai — sirf ek baar CTET pass karna hota hai. Source: <a href="https://ctet.nic.in" target="_blank">ctet.nic.in</a></p>
+      <h3 class="block-title">Notes &amp; PYQs</h3>
+      <div class="res-list">
+        <div class="res-item"><span class="name">CTET Paper 1 — Previous Year Papers</span><span class="meta">Add karo</span></div>
+        <div class="res-item"><span class="name">Child Development &amp; Pedagogy Notes</span><span class="meta">Add karo</span></div>
+        <div class="res-item"><span class="name">CTET Paper 2 Syllabus PDF</span><span class="meta">Add karo</span></div>
+      </div>
+    </section>
+
+    <section class="exam-section" id="defence">
+      <h2>Defence — NDA</h2>
+      <div class="sub">National Defence Academy — Army, Navy, Air Force</div>
+      <div class="facts">
+        <div class="fact"><div class="label">Conducting Body</div><div class="value">UPSC</div></div>
+        <div class="fact"><div class="label">Mode</div><div class="value">Offline (Written)</div></div>
+        <div class="fact"><div class="label">Stages</div><div class="value">Written + SSB Interview</div></div>
+      </div>
+      <h3 class="block-title">Exam Pattern</h3>
+      <div class="tier-list">
+        <div class="tier"><div class="num">1</div><div><div class="t-name">Paper I — Mathematics — 120 Q · 300 Marks · 2.5 hrs</div><div class="t-desc">+2.5 correct, -0.83 wrong. Class 10-12 level maths.</div></div></div>
+        <div class="tier"><div class="num">2</div><div><div class="t-name">Paper II — GAT — 150 Q · 600 Marks · 2.5 hrs</div><div class="t-desc">Part A: English (200), Part B: General Knowledge — Physics, Chemistry, History, Geography, Current Events (400). +4 correct, -1.33 wrong.</div></div></div>
+        <div class="tier"><div class="num">3</div><div><div class="t-name">SSB Interview — 900 Marks</div><div class="t-desc">4-5 din ka process: OIR, PP&amp;DT, Interview, Psychology Tests, Group Tasks, Conference.</div></div></div>
+      </div>
+      <h3 class="block-title">Subject-wise Topics</h3>
+      <div class="subject-grid">
+        <div class="subject-card"><h4>Mathematics</h4><p>Algebra, Trigonometry, Calculus, Vectors, Statistics</p></div>
+        <div class="subject-card"><h4>English</h4><p>Grammar, Comprehension, Vocabulary</p></div>
+        <div class="subject-card"><h4>General Knowledge</h4><p>Physics, Chemistry, History, Geography, Current Events</p></div>
+      </div>
+      <p class="note">Total selection: 1800 marks (Written 900 + SSB 900). Source: <a href="https://upsc.gov.in" target="_blank">upsc.gov.in</a></p>
+      <h3 class="block-title">Notes &amp; PYQs</h3>
+      <div class="res-list">
+        <div class="res-item"><span class="name">NDA Maths — Previous Year Papers</span><span class="meta">Add karo</span></div>
+        <div class="res-item"><span class="name">GAT General Knowledge Notes</span><span class="meta">Add karo</span></div>
+        <div class="res-item"><span class="name">SSB Interview Preparation Guide</span><span class="meta">Add karo</span></div>
+      </div>
+    </section>
+
+    <footer>© 2026 ExamSaathi. Saari taiyari, ek jagah.</footer>
+  </div>
+</body>
+</html>
